@@ -1,14 +1,14 @@
 package project.pd.microservice;
 
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+//import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration 
-@EnableEurekaServer
+//@EnableEurekaServer
 public class AppConfig {
 	
    @Bean 

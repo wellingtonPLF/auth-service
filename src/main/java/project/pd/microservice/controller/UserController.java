@@ -16,33 +16,33 @@ import project.pd.microservice.model.User;
 import project.pd.microservice.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/")
 public class UserController {
 	
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("/")
+	@GetMapping("/users")
    	public List<User> getUsers() {
        	return this.userService.getUsers();
    	}
    
-   	@GetMapping("/{iduser}")
+   	@GetMapping("/users/{iduser}")
    	public User getUserById(@PathVariable("iduser") Long iduser) {
        	return this.userService.getUserById(iduser);
    	}
    
-   	@PostMapping("/")
+   	@PostMapping("/users")
    	public User addUser(@RequestBody User user){
        	return this.userService.insertOrUpdate(user);
    	}
    
-   	@PutMapping("/{iduser}")
+   	@PutMapping("/users/{iduser}")
    	public User updateUser(@RequestBody User user){
 	   	return this.userService.insertOrUpdate(user);
    	}	
 
-   	@DeleteMapping("/{iduser}")
+   	@DeleteMapping("/users/{iduser}")
    	public void deleteUser(@PathVariable("iduser") Long iduser) {
 	   	this.userService.delete(iduser);
    	}
