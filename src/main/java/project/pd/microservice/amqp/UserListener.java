@@ -54,7 +54,7 @@ public class UserListener {
 			User usuario = this.userService.getUserById(decision.getIduser());
 			List<Long> decisions = usuario.getDecisions();
 			for(int i = 0; i < decisions.size(); i++) {
-				if(decisions.get(i) == decision.getIdDecision()) {
+				if(decisions.get(i).equals(decision.getIdDecision())) {
 					decisions.remove(i);
 				}
 			}
